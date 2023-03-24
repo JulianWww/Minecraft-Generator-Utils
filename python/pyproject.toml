@@ -1,15 +1,15 @@
 [build-system]
-requires = ["setuptools>=61.0", "numpy", "opencv-python"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "mc_generator_utils"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Julian Wandhoven", email="Julian.wandhoven@gamil.com" },
 ]
 description = "Utility functions for minecraft data and assets generation"
-readme = "../README.md"
+readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -17,6 +17,14 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+[tool.poetry]
+packages = [
+    { include = "numpy" },
+    { include = "opencv-python" },
+    { include = "xmltodict" },
+]
+
 [project.urls]
 "Homepage" = "https://github.com/JulianWww/Minecraft-Generator-Utils"
 "Bug Tracker" = "https://github.com/JulianWww/Minecraft-Generator-Utils/issues"
+"Source" = "https://github.com/JulianWww/Minecraft-Generator-Utils"
