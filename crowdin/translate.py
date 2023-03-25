@@ -218,10 +218,8 @@ if __name__ == "__main__":
 
   for file in os.listdir(langDir):
     trans = file[:-5].lower().replace("-", "_")
-    if (trans == "es_em"):
-      out = translate(en_us, trans, langDir + file)
+    out = translate(en_us, trans, langDir + file)
 
     os.remove(langDir + file)
-    if (trans == "es_em"):
-      with open(langDir + getMCName(trans)+".json", "w") as file:
-        dump(out, file, sort_keys=True, indent=4)
+    with open(langDir + getMCName(trans)+".json", "w") as file:
+       dump(out, file, sort_keys=True, indent=4)
