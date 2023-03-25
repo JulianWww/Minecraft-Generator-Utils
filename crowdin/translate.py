@@ -217,7 +217,7 @@ if __name__ == "__main__":
     en_us = load(file) 
 
   for file in os.listdir(langDir):
-    trans = file.removesuffix(".json").lower().replace("-", "_")
+    trans = file[:-5].lower().replace("-", "_")
     out = translate(en_us, trans, langDir + file)
 
     os.remove(langDir + file)
